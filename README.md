@@ -28,19 +28,32 @@ This repository contains the following content:
 
 # Files 
 |_> Corpora/
+
     |_> Corpus1
-    |_> Corpus2: 
+
+    |_> Corpus2:
+
 |_> Targetwords/
+
     |_> ...
+
 |_> LSCD_Models/
+
     |_> ...
+
 |_> Results
+
     |_> Experiment_testset_DG
+
         |_> test.eg
+
         |_> test.txt
+
         |_> 2_7_1_Thesis_experiment_nist_test_best_predictions.txt 
             (predicted definitions)
+
     |_> Perplexity_DG_results_annotated_testset.tsv
+    
     |_> Perplexity_DG_results_first_20_target_words.tsv
 
 # References
