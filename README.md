@@ -1,12 +1,20 @@
 # Beyond Perplexity: Examining Temporal Generalization of Large Language Models via Definition Generation
-Master of Logic
-university of Amsterdam
-June 2023 
-By: Iris Luden
-Supervision: Raquel Fernandez
+
+Paper (CLIN33): [TO DO insert link]
+
+## Authors
+
+Iris Luden
+dr. Mario Giulianelli
+prof. dr. Raquel Fernandez
 
 # Abstract 
-The emergence of large language models (LLMs) has significantly improved performance across various Natural Language Processing (NLP) tasks. However, the field of NLP predominantly follows a static language modeling paradigm, resulting in performance deterioration of LLMs over time. This indicates a lack of temporal generalization, i.e., the ability to extend their capabilities to data beyond their training period. In real-life NLP applications, models are often pre-trained on data from one time period and next deployed for tasks which inherently involves temporally shifted data. So far, performance deterioration of LLMs is primarily attributed to the factual changes over time, leading to attempts of updating a LLMs factual knowledge to avoid performance deterioration. However, not only the facts of the world, but also the language we use to describe it constantly changes. Recent studies have indicated a relationship between performance deterioration and semantic change. While previous publications have demonstrated that LLM performance may deteriorate over time, this is typically measured using perplexity scores and relative performance on downstream tasks. However, such dry comparisons of perplexity and accuracy do not explain the effects of temporally shifted data on LLMs in practice. Given the potential societal impact of NLP applications, it is crucial to not only understand if LLM performance deteriorates over time, but also gain insight into how the degradation of performance (particularly caused by semantic change) is reflected in the output of LLMs. This work investigates how semantic change in temporally shifted data impacts the performance of a LLM on the downstream task of contextualized word definition generation. This approach offers a dual perspective: quantitative measurement of performance deterioration, as well as human-interpretable output through the generated definitions. First, we construct two diachronic corpora of Twitter and Reddit data, such that one overlaps in time with the pre-training period, and the other is temporally shifted. Next, we use a lexical semantic change system to collect a set of semantically changed target words, a set of stable words, and collect a set of emerging new words. Third, we evaluate the performance of the definition generation model in both time periods, and analyze whether semantic change impacts performance. Fourth, we compare the results with cross entropy and perplexity scores for the same inputs. The results indicate that (i) the model’s performance deteriorates for the task of contextualized word definition generation, (ii) the performance deteriorates more for semantically changing words compared to semantically stable words, (iii) the model exhibits significantly lower performance and potential bias for emerging new words, and (iv) the performance does not correlate with loss or (pseudo)-perplexity scores. Overall, our results show that definition generation can be a promising task to assess a model's capacity for temporal generalization with respect to semantic and lexical change. 
+The advent of large language models (LLMs) has significantly improved performance across various Natural Language Processing tasks. However, the performance of LLMs has been shown to deteriorate over time, indicating a lack of temporal generalization. 
+To date, performance deterioration of LLMs is primarily attributed to the factual changes in the real world over time. However, not only the facts of the world, but also the language we use to describe it constantly changes. Recent studies have indicated a relationship between performance deterioration and semantic change. This is typically measured using perplexity scores and relative performance on downstream tasks. Yet, perplexity and accuracy do not explain the effects of temporally shifted data on LLMs in practice. 
+
+In this work, we propose to assess lexico-semantic temporal generalization of a language model by exploiting the task of contextualized word definition generation. This in-depth semantic assessment enables interpretable insights into the possible mistakes a model may perpetrate due to meaning shift, and can be used to complement more coarse-grained measures like perplexity scores. To assess how semantic change impacts performance, we design the task by differentiating between semantically stable, changing, and emerging target words, and experiment with $\texttt{T5-base}$, fine-tuned for contextualized definition generation. 
+
+Our results indicate that (i) the model’s performance deteriorates for the task of contextualized word definition generation, (ii) the performance deteriorates more for semantically changing words compared to semantically stable words, (iii) the model exhibits significantly lower performance and potential bias for emerging words, and (iv) the performance does not correlate with cross-entropy or (pseudo)-perplexity scores. Overall, our results show that definition generation can be a promising task to assess a model’s capacity for temporal generalization with respect to semantic change. 
 
 # Content
 
@@ -31,15 +39,17 @@ This repository contains the following content:
 
     |_> Corpus1
 
-    |_> Corpus2:
+    |_> Corpus2
 
 |_> Targetwords/
 
-    |_> ...
+    |_> ... candidate + stable + changing + emerging (TO DO)
 
 |_> LSCD_Models/
 
     |_> ...
+    
+|_>
 
 |_> Results
 
@@ -72,18 +82,25 @@ Linguistics: System Demonstrations, pages 251–260, Dublin, Ireland. Associ-
 ation for Computational Linguistics. https://aclanthology.org/2022.ac
 l-demo.25.
 
-
 #### LSCD
-Schlechtweg, D., Tahmasebi, N., Hengchen, S., Dubossarsky, H., and
-McGillivray, B. (2021). DWUG: A large resource of diachronic word usage
-graphs in four languages. In Proceedings of the 2021 Conference on Empir-
-ical Methods in Natural Language Processing, pages 7079–7091, Online and
-Punta Cana, Dominican Republic. Association for Computational Linguistics.
-https://aclanthology.org/2021.emnlp-main.567.
+Schlechtweg, D., Hätty, A., del Tredici, M., & im Walde, S. S. A Wind of Change: Detecting and Evaluating Lexical Semantic Change across Times and Domains.
+https://aclanthology.org/P19-1072/
 
-#### fine-tuning contextualized defintion generation
+#### Fine-tuning T5 for Contextualized Defintion Generation
 Huang, H., Kajiwara, T., and Arase, Y. (2021). Definition Modelling for
 Appropriate Specificity. In Proceedings of the 2021 Conference on Empir-
 ical Methods in Natural Language Processing, pages 2499–2509, Online and
 Punta Cana, Dominican Republic. Association for Computational Linguistics.
-https://aclanthology.org/2021.emnlp-main.194.
+https://aclanthology.org/2021.emnlp-main.194
+
+# Citing
+
+If you use our work in your research, please use the following bib entry to cite the [to do]
+```
+insert BibTeX entry 
+```
+
+
+# Contact
+
+In case of questions, contact [irisluden@gmail.com]
