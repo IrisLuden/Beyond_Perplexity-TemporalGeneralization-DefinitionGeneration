@@ -41,29 +41,29 @@ This repository contains the following content:
 
     |_> Corpus2
 
-|_> Targetwords/
+|_> Collect_Corpus_Reddit
 
-    |_> ... candidate + stable + changing + emerging (TO DO)
+|_> Collect_Corpus_Twitter
 
-|_> LSCD_Models/
+|_> Corpus_statistics (to upload)
 
-    |_> ...
-    
-|_>
+|_> Targetwords
 
-|_> Results
+|_> LSCD_scores
+
+|_> Definition_Generation 
+    |_> data
+    |_>
+
+|_> Compute_Loss
+
+|_> Results 
 
     |_> Experiment_testset_DG
-
         |_> test.eg
-
         |_> test.txt
-
         |_> 2_7_1_Thesis_experiment_nist_test_best_predictions.txt 
-            (predicted definitions)
-
     |_> Perplexity_DG_results_annotated_testset.tsv
-    
     |_> Perplexity_DG_results_first_20_target_words.tsv
 
 # References
