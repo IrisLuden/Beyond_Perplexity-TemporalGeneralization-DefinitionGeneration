@@ -1,11 +1,11 @@
-# Annot 
+# Definition generation results
 
 Author: Iris Luden 
 
 
 # Files 
 
-|_> Shuffled: contains the columns
+|_> Shuffled: contains the columns:
     - Word_id 
     - Word
     - Corpus	
@@ -13,13 +13,16 @@ Author: Iris Luden
     - Example 
     - Prediction	
     - Judgement
+    
 |_> Annotators file: Contains only the columns
+
     - Word: the target word for which the contexxtualized definition is generated
     - Judgemnt: an empty column in which the annotators can fill in their judgement 
     - Example: the sentence in which the target word is used 
     - Prediction/Definition: the predicted definition by the definition generation model
 
 |_> Perplexities: contains the metadata. Columns are: 
+
     - Word_id: targetword%Corpusid.lineid
     - Word: target word only
     - Example: example sentence from corpus determined by corpusid
