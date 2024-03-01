@@ -43,7 +43,7 @@ This repository contains the following content:
 
 |_> Collect_Corpus_Twitter
 
-|_> Corpus_statistics (to upload)
+|_> Corpus_statistics.ipynb
 
 |_> Targetwords
 
@@ -51,12 +51,10 @@ This repository contains the following content:
 
 |_> Definition_Generation 
     |_> data/oxford/
-    |_> ... 
-
+    
 |_> Compute_Loss
 
 |_> Results 
-
     |_> Experiment_testset_DG
         |_> test.eg
         |_> test.txt
