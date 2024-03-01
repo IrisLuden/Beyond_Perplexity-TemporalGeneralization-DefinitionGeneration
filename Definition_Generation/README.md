@@ -1,40 +1,31 @@
-# Definition generation results
+# Fine-tuning T5 for contextualized definition generation 
 
-Author: Iris Luden 
+This folder contains the results of the contextualized definition generation experiments for the set of targetwords found in the folder 'Targetwords/'. 
+
+We fine-tune T5 following Huang et. al. (2021). Instructions of fine-tuning can be found here: https://github.com/amanotaiga/Definition_Modeling_Project . 
 
 
-# Files 
-
-|_> Shuffled: contains the columns:
-    - Word_id 
-    - Word
-    - Corpus	
-    - Line number	
-    - Example 
-    - Prediction	
-    - Judgement
+|_> data/
+    |_> oxford_orig: upload the original oxford data set found in http://www.tkl.iis.u-tokyo.ac.jp/~ishiwatari/naacl_data.zip
+    |_> filder_oxford_data.py filters oxford_orig for the designated targetwords
+    |_> oxford
+        |_> train.txt    
+        |_> train.eg
+        |_> valid.txt
+        |_> valid.eg
+        
+        |_> test.txt (the to-be-predicted definitions
+        |_> test.eg (insert desired example sentences
+|_> 2_7_1_Thesis_experiment_nist_test_best_predictions.txt
+    predictions made for example sentences by the fine-tuned model
+|_> Judgement Aggregation.ipynb
+    Notebook where judgements are aggregated and krippindorff alpha is computed
+|_> Shuffled_2_7_1_Annotators_experiment_nist_test_best_predictions.tsv
+    The target words are shuffled such that the emerging, stable, and changing targetwords are mixed. This file (excluding the first column) is given to the annotators. 
+|_> Annotations_Merged_2_7_1_Annotators_experiment.tsv
+    Judgements of the annotators in a single file. Contains the columns: 
     
-|_> Annotators file: Contains only the columns
-
     - Word: the target word for which the contexxtualized definition is generated
-    - Judgemnt: an empty column in which the annotators can fill in their judgement 
+    - Judgement: an empty column in which the annotators can fill in their judgement 
     - Example: the sentence in which the target word is used 
     - Prediction/Definition: the predicted definition by the definition generation model
-
-|_> Perplexities: contains the metadata. Columns are: 
-
-    - Word_id: targetword%Corpusid.lineid
-    - Word: target word only
-    - Example: example sentence from corpus determined by corpusid
-    - Prediction: definition generated for the example sentence
-    - Examples NLL: cross-entropy/negative-log-likelihood of T5-base for the example sentence in the corresponding row
-    - Definitions NLL: negative log-likelihood of T5-base for the generated definition in the corresponding row
-    - Words NLL: negative log-likelihood of T5-base for predicting the masked target word in the example sentence of the corresponding row
-    - Examples PPL: perplexity of the example sentence 
-    - Words PPL: perplexity of the masked target word prediction task
-    - Definitions PPL: perplexity on the definition
-    - Examples PLL left: pseudo-log-likelihood of the example sentence when calculating the pseudo-log-likelihood only using the left hand context of the sentence
-    - Definitions PLL left:	pseudo-log-likelihood of the definition when calculating the pseudo-log-likelihood only using the left hand context of the sentence
-    - Examples PLL bi: pseudo-log-likelihood when calculating the pseudo-log-likelihood only using context of both sides of the target word
-    - Definitions PLL bi: 	pseudo-log-likelihood when calculating the pseudo-log-likelihood only using the context of both sides of the target word 
-
