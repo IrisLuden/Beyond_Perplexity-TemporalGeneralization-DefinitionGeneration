@@ -23,16 +23,14 @@ This repository contains the following content:
     (-> Corpora/)
 2. A collected set of target words under investigation: changing, stable, and emerging words in 
     (-> Targetwords/)
-3. LSCD models on both corpora following (Schlechtweg et. al. (2021) 
-    (-> LSCD_Models/)
-4. Computed LSCD scores for the target words 
+3. Computed LSCD scores for the target words 
     (-> LSCD_scores)
-5. Fine-tuned T5-base for definition generation following Huang et. al. (2021). 
+4. Fine-tuning T5-base for definition generation following Huang et. al. (2021). 
 5. Applied the DG model on a collection of example usages for each target word. 
     (Results/Experiment_testset_DG/)
 6. Human annotation 
     ('Results/Perplexity_DG_results_annotated_testset.tsv' )
-7. Perplexity, psuedo-log-likelihood, and Cross-entropy loss analysis (Results/Perplexity_DG_results_first_20_target_words.tsv)
+7. Compute loss for the collected example sentences (Perplexity, psuedo-log-likelihood, and Cross-entropy loss analysis (Results/Perplexity_DG_results_first_20_target_words.tsv) ) 
 
 # Files 
 |_> Corpora/
@@ -52,8 +50,8 @@ This repository contains the following content:
 |_> LSCD_scores
 
 |_> Definition_Generation 
-    |_> data
-    |_>
+    |_> data/oxford/
+    |_> ... 
 
 |_> Compute_Loss
 
